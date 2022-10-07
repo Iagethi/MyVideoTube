@@ -1,7 +1,6 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import LogoTube from "../img/logo.png";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import LamaTube from "../img/logo.png";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
@@ -18,21 +17,19 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
-
+import { Link } from "react-router-dom";
 const Container = styled.div`
   flex: 1;
-  background-color: ${({ theme }) => theme.bg};
-  height: 180vh;
+  background-color: ${({ theme }) => theme.bgLighter};
+  height: 100vh;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
   top: 0;
 `;
-
 const Wrapper = styled.div`
   padding: 18px 26px;
 `;
-
 const Logo = styled.div`
   display: flex;
   align-items: center;
@@ -51,6 +48,7 @@ const Item = styled.div`
   gap: 20px;
   cursor: pointer;
   padding: 7.5px 0px;
+
   &:hover {
     background-color: ${({ theme }) => theme.soft};
   }
@@ -89,8 +87,8 @@ const Menu = ({ darkMode, setDarkMode }) => {
       <Wrapper>
         <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <Logo>
-            <Img src={LogoTube} />
-            LucaTube
+            <Img src={LamaTube} />
+            LamaTube
           </Logo>
         </Link>
         <Item>
@@ -106,6 +104,15 @@ const Menu = ({ darkMode, setDarkMode }) => {
           Subscriptions
         </Item>
         <Hr />
+        <Item>
+          <VideoLibraryOutlinedIcon />
+          Library
+        </Item>
+        <Item>
+          <HistoryOutlinedIcon />
+          History
+        </Item>
+        <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
           <Link to="signin" style={{ textDecoration: "none" }}>
@@ -116,16 +123,7 @@ const Menu = ({ darkMode, setDarkMode }) => {
           </Link>
         </Login>
         <Hr />
-        <Title>BEST OF LUCATUBE</Title>
-        <Item>
-          <VideoLibraryOutlinedIcon />
-          Library
-        </Item>
-        <Item>
-          <HistoryOutlinedIcon />
-          History
-        </Item>
-        <Hr />
+        <Title>BEST OF LAMATUBE</Title>
         <Item>
           <LibraryMusicOutlinedIcon />
           Music

@@ -79,7 +79,7 @@ const SignIn = () => {
         <Button>Sign up</Button>
       </Wrapper>
       <More>
-        English(USA)
+        English
         <Links>
           <Link>Help</Link>
           <Link>Privacy</Link>
