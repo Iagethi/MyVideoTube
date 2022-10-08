@@ -81,6 +81,7 @@ export const like = async (req, res, next) => {
   const videoId = req.params.videoId;
   try {
     await Video.findByIdAndUpdate(videoId, {
+      //$addToSet chek if ther is only one time
       $addToSet: { likes: id },
       $pull: { dislikes: id },
     });
